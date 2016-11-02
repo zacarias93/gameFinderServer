@@ -16,7 +16,9 @@ public class User {
     private String phoneNum;
     private String email;
     private String password;
-    private String favoriteTeam;
+    private String league;
+    private String team;
+    private String leagueURL;
 
     public User(){}
 
@@ -48,11 +50,39 @@ public class User {
         return password;
     }
 
-    public String getFavoriteTeam() {
-        return favoriteTeam;
+    public String getTeam() {
+        return team;
     }
 
-    public void setFavoriteTeam(String favoriteTeam) {
-        this.favoriteTeam = favoriteTeam;
+    public String getLeague() {
+        return league;
+    }
+
+    public String getLeagueURL() {
+        return leagueURL;
+    }
+
+    public void setTeam(String team) {
+        this.team = team;
+    }
+
+    public void setLeague(String league) {
+        this.league = league;
+    }
+
+    public void setLeagueURL(String leagueURL) {
+        this.leagueURL = leagueURL;
+    }
+
+    public void setPhoneNum(String phoneNum) {
+        this.phoneNum = phoneNum;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 }
