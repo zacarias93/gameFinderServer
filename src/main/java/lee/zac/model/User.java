@@ -17,7 +17,7 @@ public class User {
     private String email;
     private String password;
     private String league;
-    private String team;
+    private String teamName;
     private String leagueURL;
 
     public User(){}
@@ -50,8 +50,8 @@ public class User {
         return password;
     }
 
-    public String getTeam() {
-        return team;
+    public String getTeamName() {
+        return teamName;
     }
 
     public String getLeague() {
@@ -62,8 +62,8 @@ public class User {
         return leagueURL;
     }
 
-    public void setTeam(String team) {
-        this.team = team;
+    public void setTeamName(String teamName) {
+        this.teamName = teamName;
     }
 
     public void setLeague(String league) {

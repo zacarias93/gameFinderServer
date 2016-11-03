@@ -18,14 +18,14 @@ public class LoginController {
 
     @RequestMapping(value = "/findByUserName/{userName}", method= RequestMethod.GET)
     public User findByUserName(@PathVariable String userName) {
-        User temp =  userRepo.findByUserName(userName);
-        return temp;
+        User user =  userRepo.findByUserName(userName);
+        return user;
     }
 
     @RequestMapping(value = "/update", method= RequestMethod.PUT, consumes=MediaType.APPLICATION_JSON_VALUE)
     public @ResponseBody String updateFavTeam(@RequestBody User user) {
         User update = userRepo.findByUserName(user.getUserName());
-        update.setTeam(user.getTeam());
+        update.setTeamName(user.getTeamName());
         update.setLeague(user.getLeague());
         update.setLeagueURL(user.getLeagueURL());
         userRepo.save(update);
