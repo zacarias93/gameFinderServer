@@ -12,26 +12,26 @@ public class User {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
-    private String userName;
+    private String username;
     private String phoneNum;
     private String email;
     private String password;
     private String league;
-    private String teamName;
-    private String leagueURL;
+    private String teamname;
+    private String prediction;
 
     public User(){}
 
     public User(String name, String phoneNum, String email, String password) {
-        this.userName =name;
+        this.username =name;
         this.phoneNum=phoneNum;
         this.email = email;
         this.password = password;
     }
 
 
-    public String getUserName() {
-        return userName;
+    public String getUsername() {
+        return username;
     }
 
     public String getPhoneNum() {
@@ -50,28 +50,20 @@ public class User {
         return password;
     }
 
-    public String getTeamName() {
-        return teamName;
+    public String getTeamname() {
+        return teamname;
     }
 
     public String getLeague() {
         return league;
     }
 
-    public String getLeagueURL() {
-        return leagueURL;
-    }
-
-    public void setTeamName(String teamName) {
-        this.teamName = teamName;
+    public void setTeamname(String teamname) {
+        this.teamname = teamname;
     }
 
     public void setLeague(String league) {
         this.league = league;
-    }
-
-    public void setLeagueURL(String leagueURL) {
-        this.leagueURL = leagueURL;
     }
 
     public void setPhoneNum(String phoneNum) {
@@ -85,4 +77,13 @@ public class User {
     public void setPassword(String password) {
         this.password = password;
     }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public void setPrediction(String prediction) { this.prediction = prediction; }
+
+    public String getPrediction() { return prediction; }
+
 }
